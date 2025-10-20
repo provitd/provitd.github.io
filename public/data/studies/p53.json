@@ -24,14 +24,14 @@
       "name": "SingleCellViz - p53 scRNA-seq",
       "description": "",
       "format": "",
-      "url": "https://metzger-chambon.igbmc.science/SingleCellViz-p53",
+      "url": "https://metzger-chambon.igbmc.science/SingleCellViz-p53/?_inputs_&dataset-study=%22p53%20scRNA%22",
       "size": ""
     },
     {
       "name": "SingleCellViz - p53 snATAC-seq",
       "description": "",
       "format": "",
-      "url": "https://metzger-chambon.igbmc.science/SingleCellViz-p53",
+      "url": "https://metzger-chambon.igbmc.science/SingleCellViz-p53/?_inputs_&dataset-study=%22p53%20snATAC%22",
       "size": ""
     }
   ]
