@@ -19,14 +19,14 @@
       "name": "SingleCellViz - PTEN vs WT",
       "description": "",
       "format": "",
-      "url": "https://metzger-chambon.igbmc.science/SingleCellViz-PtenHif/",
+      "url": "https://metzger-chambon.igbmc.science/SingleCellViz-PtenHif/?_inputs_&dataset-study=%22PTEN%20vs%20WT%22",
       "size": ""
     },
     {
       "name": "SingleCellViz - PTEN HIF vs PTEN",
       "description": "",
       "format": "",
-      "url": "https://metzger-chambon.igbmc.science/SingleCellViz-PtenHif/",
+      "url": "https://metzger-chambon.igbmc.science/SingleCellViz-PtenHif/?_inputs_&dataset-study=%22PTEN%20HIF%20vs%20PTEN%22",
       "size": ""
     }
   ]
