@@ -28,6 +28,13 @@
       "format": "",
       "url": "https://metzger-chambon.igbmc.science/SingleCellViz-PtenHif/?_inputs_&dataset-study=%22PTEN%20HIF%20vs%20PTEN%22",
       "size": ""
+    },
+    {
+      "name": "SingleCellViz - PTEN Luminal kinetic",
+      "description": "",
+      "format": "",
+      "url": "https://metzger-chambon.igbmc.science/SingleCellViz-PtenHif/?_inputs_&dataset-study=%22PTEN%20Luminal%20kinetic%22",
+      "size": ""
     }
   ]
 }
