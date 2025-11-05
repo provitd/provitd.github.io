@@ -30,10 +30,10 @@
       "size": ""
     },
     {
-      "name": "SingleCellViz - PTEN Luminal kinetic",
+      "name": "SingleCellViz - PTEN Luminal stages",
       "description": "",
       "format": "",
-      "url": "https://metzger-chambon.igbmc.science/SingleCellViz-PtenHif/?_inputs_&dataset-study=%22PTEN%20Luminal%20kinetic%22",
+      "url": "https://metzger-chambon.igbmc.science/SingleCellViz-PtenHif/?_inputs_&dataset-study=%22PTEN%20Luminal%20stages%22",
       "size": ""
     }
   ]
