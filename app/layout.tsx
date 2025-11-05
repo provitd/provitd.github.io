@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Group of Gilles Laverny Website",
-  description: "Group of Gilles Laverny (IGBMC) Website. Investigating the molecular mechanisms by which vitamin D signaling influences cellular processes and disease progression.",
+  title: "PROVitD - Laverny Group Website",
+  description: "PROVitD - Pathophysiological Role Of Vitamin D - Laverny's Group at IGBMC. Investigating the molecular mechanisms by which vitamin D signaling influences cellular processes and disease progression.",
 };
 
 export default function RootLayout({

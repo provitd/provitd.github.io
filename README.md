@@ -16,7 +16,8 @@ Keep the `main` branch as the stable production code that gets deployed to GitHu
 Use a different branch (e.g., `develop`) for ongoing development work.
 Push your commits there as often as you want.
 
-Once you’re happy with your changes, create a Pull Request from `dev` → `main`. Review, test, and merge. That merge triggers the deployment workflow and updates the live site.
+To test that the build will work, run `npm run build`.
+If the build worked and you’re happy with your changes, create a Pull Request from `dev` → `main`. Review, test, and merge once again if the merge of the branges created more commits. Updating the `main` branch triggers the deployment workflow and updates the live site.
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 

@@ -12,31 +12,33 @@ export default function Home() {
     <main>
       <section className="relative text-(--foreground)">
         <img
-          src="https://media.springernature.com/w580h326/nature-cms/uploads/collections/AdobeStock_477924278_Edit_1.psd.iCeT2L_kMSdTZ8ljwCUA.8kCjC9Nd56-082e3c847215d89ce64902c3cde78263.jpg" // Replace with actual image URL
-          alt="Spatial Transcriptomics"
-          className="absolute inset-0 w-full h-full object-cover opacity-30"
+          src="images/banner.png" // Replace with actual image URL
+          alt="Spatial Transcriptomics image"
+          className="absolute inset-0 w-full h-full object-cover opacity-45"
         />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <h1 className="text-2xl md:text-4xl font-bold mb-6 flex items-center justify-center gap-2">
-              <a
-                href="https://www.igbmc.fr/en/recherche/teams/subgroups/pathophysiological-role-of-vitamin-d-signalling"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="External link to group page"
-              >
-                <span> Group of Gilles Laverny - IGBMC </span> 
-                <ExternalLink className="inline align-middle"/>
-              </a>
+              <span> PROVitD - Pathophysiological Role Of Vitamin D </span> 
             </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
-              Investigating the molecular mechanisms by which vitamin D
-              signaling influences cellular processes and disease progression.
-            </p>
+            
+            <h2 className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
+                Investigating the molecular mechanisms by which vitamin D
+                signaling influences cellular processes and disease progression
+            </h2>
+            <h3 className="text-l md:text-xl italic mb-8 max-w-2xl mx-auto opacity-90">
+                Group lead by Dr. Gilles Laverny at IGBMC
+            </h3>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/studies">
-                <Button size="xl" variant="outline">
+                <Button size="xl" variant="outline" className="bg-(--accent-background2)">
                   <span className="text-lg">Explore Our Research</span>
+                </Button>
+              </Link>
+              <Link href="https://www.igbmc.fr/en/recherche/teams/subgroups/pathophysiological-role-of-vitamin-d-signalling">
+                <Button size="xl" variant="outline" className="bg-(--accent-background2)">
+                  <span className="text-lg">Visit IGBMC Group Page</span>
                 </Button>
               </Link>
             </div>

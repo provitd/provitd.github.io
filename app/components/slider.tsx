@@ -39,7 +39,7 @@ function Slider({
     >
       <SliderPrimitive.Track
         data-slot="slider-track"
-        className="bg-[var(--accent-background)] relative grow overflow-hidden rounded-full h-4 w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-1.5"
+        className="bg-[var(--accent-background2)] relative grow overflow-hidden rounded-full h-4 w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-1.5"
       >
         <SliderPrimitive.Range
           data-slot="slider-range"

@@ -4,9 +4,10 @@
 @tailwind utilities;
 
 :root {
-  --background: #e0dddd;
+  --background: #ffffff;
   --foreground: #3a2a2a;
-  --accent-background: rgb(174, 174, 203);
+  --accent-background: rgb(188, 188, 240);
+  --accent-background2: rgb(225, 225, 247);
   --accent-foreground: rgb(12, 12, 13);
   --navbarbg: var(--background);
   --footerbg: var(--background);
