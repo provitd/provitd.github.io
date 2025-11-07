@@ -14,7 +14,7 @@ export default function Home() {
         <img
           src="images/banner.png" // Replace with actual image URL
           alt="Spatial Transcriptomics image"
-          className="absolute inset-0 w-full h-full object-cover opacity-45"
+          className="absolute inset-0 w-full h-full object-cover opacity-25"
         />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
