@@ -55,22 +55,28 @@ export default function StudyCard({ study }: StudyCardProps) {
   return (
     <Card className="overflow-hidden hover:shadow-lg transition-shadow">
       {study.imageUrl && (
-        <img
-          src={study.imageUrl}
-          alt={study.title}
-          className="w-full h-48 object-cover"
-        />
+        <div className="w-full h-48 bg-transparent flex items-center justify-center">
+          <img
+            src={study.imageUrl}
+            alt={study.title}
+            className="w-full h-full object-contain"
+          />
+        </div>
       )}
       <CardContent className="p-6">
         <h3 className="text-xl font-semibold">
-          <a
-            href={`https://doi.org/${study.doi}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-(--accent-foreground) transition-colors"
-          >
-            {study.title}
-          </a>
+          {study.doi === "" ? (
+            <span>{study.title}</span>
+          ) : (
+            <a
+              href={`https://doi.org/${study.doi}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-(--accent-foreground) transition-colors"
+            >
+              {study.title}
+            </a>
+          )}
         </h3>
         <div className="flex flex-wrap gap-2 mt-4 mb-4">
           {(() => {
@@ -134,14 +140,18 @@ export default function StudyCard({ study }: StudyCardProps) {
             {study.year}
           </div>
           <div className="flex items-center space-x-2">
-            <a
-              href={`https://doi.org/${study.doi}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ml-2 text-(--foreground) hover:text-(--accent-foreground)"
-            >
-              {study.doi}
-            </a>
+            {study.doi === "" ? (
+              <span className="text-(--foreground)">TBD</span>
+            ) : (
+              <a
+                href={`https://doi.org/${study.doi}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ml-2 text-(--foreground) hover:text-(--accent-foreground)"
+              >
+                {study.doi}
+              </a>
+            )}
           </div>
         </div>
       </CardContent>
