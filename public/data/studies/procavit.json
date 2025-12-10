@@ -1,0 +1,26 @@
+{
+  "id": "procavit",
+  "title": "Impaired vitamin D signaling reveals neutrophils as key drivers of prostate cancer dissemination",
+  "description": "One dissociated prostate of Pten(i)pe−/−  and of Pten/Vdr(i)pe−/− mice 3 months after gene inactivation.",
+  "authors": ["Len-Tayon, K"],
+  "categories": {
+    "biologicalApplication": ["Prostate Cancer", "Vitamin D"], 
+    "sequencingPlatform": [{
+      "name": "scRNA-seq",
+      "sub": "10x Genomics v2"
+    }]
+  },
+  "imageUrl": "/images/procavit.png",
+  "doi": "TBD",
+  "date": "01/01/2026",
+  "year": 2026,
+  "datasets": [
+    {
+      "name": "SingleCellViz - PTEN vs VDR",
+      "description": "",
+      "format": "",
+      "url": "https://metzger-chambon.igbmc.science/SingleCellViz-PtenVdr/?_inputs_&dataset-study=%22Pten%20vs%20Vdr%22",
+      "size": ""
+    }
+  ]
+}
