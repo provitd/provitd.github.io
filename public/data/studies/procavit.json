@@ -16,10 +16,10 @@
   "year": 2026,
   "datasets": [
     {
-      "name": "SingleCellViz - VDR vs PTEN",
+      "name": "SingleCellViz - PTEN VDR vs PTEN",
       "description": "",
       "format": "",
-      "url": "https://metzger-chambon.igbmc.science/SingleCellViz-PtenVdr/?_inputs_&dataset-study=%22VDR%20vs%20PTEN%22",
+      "url": "https://metzger-chambon.igbmc.science/SingleCellViz-PtenVdr/?_inputs_&dataset-study=%22PTEN%20VDR%20vs%20PTEN%22",
       "size": ""
     }
   ]
