@@ -1,0 +1,26 @@
+{
+    "id": "immune-proca-altlas",
+    "title": "Characterization of the immune landscape in healthy mouse prostate and during prostate cancer progression",
+    "description": "Pool of dissociated dorsolateral and ventral lobes of prostates from 5 control and 3 Pten(i)pe-/- mice. Two time points: 3 months and 9 months after gene inactivation.",
+    "authors": ["Pervizou, D (collaborator)"],
+    "categories": {
+      "biologicalApplication": ["Prostate Cancer"],
+      "sequencingPlatform": [{
+        "name": "scRNA-seq",
+        "sub": "10x Genomics v3"
+      }]
+    },
+    "imageUrl": "",
+    "doi": "10.1080/2162402X.2025.2562220",
+    "date": "26/09/2025",
+    "year": 2025,
+    "datasets": [
+        {
+        "name": "SingleCellViz - PTEN Immune Atlas",
+        "description": "",
+        "format": "",
+        "url": "https://metzger-chambon.igbmc.science/SingleCellViz-PtenImmuneAtlas/",
+        "size": ""
+        }
+    ]
+}
