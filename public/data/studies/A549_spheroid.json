@@ -1,0 +1,26 @@
+{
+    "id": "A549-spheroid",
+    "title": "Dissecting minimal residual disease in spheroids reveals pan-cancer persistence signatures and a therapeutic window for Oncolytic Viruses",
+    "description": "A549 NSCLC spheroids in a treatment-induced persistent state (following a two-week cisplatin-pemetrexed treatment), together with untreated controls.",
+    "authors": ["Fauveau, C"],
+    "categories": {
+      "biologicalApplication": ["Persistence", "3D models"],
+      "sequencingPlatform": [{
+        "name": "scRNA-seq",
+        "sub": "10x Genomics Flex"
+      }]
+    },
+    "imageUrl": "",
+    "doi": "",
+    "date": "01/07/2026",
+    "year": 2026,
+    "datasets": [
+        {
+        "name": "SingleCellViz - A549 Spheroid",
+        "description": "",
+        "format": "",
+        "url": "https://metzger-chambon.igbmc.science/SingleCellViz-A549Spheroid/",
+        "size": ""
+        }
+    ]
+}
