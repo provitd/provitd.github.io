@@ -1,0 +1,119 @@
+{
+  "id": "brain_opioid",
+  "title": "A cell-type-specific brain atlas of opioid system transcripts",
+  "description": "Under review.",
+  "authors": ["Ebner, C (collaborator)"],
+  "categories": {
+    "biologicalApplication": ["Brain"], 
+    "sequencingPlatform": [{
+      "name": "Xenium",
+      "sub": "v1"
+    }]
+  },
+  "imageUrl": "",
+  "doi": "",
+  "date": "",
+  "year": "2026",
+  "datasets": [
+    {"name": "SCP3458 - 0021402__Region_1",
+      "description": "",
+      "format": "",
+      "url": "https://singlecell.broadinstitute.org/single_cell/study/SCP3458/spatial-mouse-brain-opioid-0021402-region-1",
+      "size": ""
+    },
+    {"name": "SCP3711 - 0021402__Region_2",
+      "description": "",
+      "format": "",
+      "url": "https://singlecell.broadinstitute.org/single_cell/study/SCP3711/spatial-mouse-brain-opioid-0021402-region-2",
+      "size": ""
+    },
+    {"name": "SCP3699 - 0021402__Region_3",
+      "description": "",
+      "format": "",
+      "url": "https://singlecell.broadinstitute.org/single_cell/study/SCP3699/spatial-mouse-brain-opioid-0021402-region-3",
+      "size": ""
+    },
+    {"name": "SCP3705 - 0021460__Region_1",
+      "description": "",
+      "format": "",
+      "url": "https://singlecell.broadinstitute.org/single_cell/study/SCP3705/spatial-mouse-brain-opioid-0021460-region-1",
+      "size": ""
+    },
+    {"name": "SCP3707 - 0021460__Region_2",
+      "description": "",
+      "format": "",
+      "url": "https://singlecell.broadinstitute.org/single_cell/study/SCP3707/spatial-mouse-brain-opioid-0021460-region-2",
+      "size": ""
+    },
+    {"name": "SCP3699 - 0021402__Region_3",
+      "description": "",
+      "format": "",
+      "url": "https://singlecell.broadinstitute.org/single_cell/study/SCP3699/spatial-mouse-brain-opioid-0021402-region-3",
+      "size": ""
+    },
+    {"name": "SCP3712 - 0042556__3F3",
+      "description": "",
+      "format": "",
+      "url": "https://singlecell.broadinstitute.org/single_cell/study/SCP3712/spatial-mouse-brain-opioid-0042556-3f3",
+      "size": ""
+    },
+    {"name": "SCP3713 - 0042556__3F1",
+      "description": "",
+      "format": "",
+      "url": "https://singlecell.broadinstitute.org/single_cell/study/SCP3713/spatial-mouse-brain-opioid-0042556-3f1",
+      "size": ""
+    },
+    {"name": "SCP3714 - 0042556__4F2",
+      "description": "",
+      "format": "",
+      "url": "https://singlecell.broadinstitute.org/single_cell/study/SCP3714/spatial-mouse-brain-opioid-0042556-4f2",
+      "size": ""
+    },
+    {"name": "SCP3715 - 0042556__4F3",
+      "description": "",
+      "format": "",
+      "url": "https://singlecell.broadinstitute.org/single_cell/study/SCP3715/spatial-mouse-brain-opioid-0042556-4f3",
+      "size": ""
+    },
+    {"name": "SCP3718 - 0042555__1F1",
+      "description": "",
+      "format": "",
+      "url": "https://singlecell.broadinstitute.org/single_cell/study/SCP3718/spatial-mouse-brain-opioid-0042555-1f1",
+      "size": ""
+    },
+    {"name": "SCP3719 - 0042555__1F2",
+      "description": "",
+      "format": "",
+      "url": "https://singlecell.broadinstitute.org/single_cell/study/SCP3719/spatial-mouse-brain-opioid-0042555-1f2",
+      "size": ""
+    },
+    {
+      "name": "SCP3720 - 0042555__4F1",
+      "description": "",
+      "format": "",
+      "url": "https://singlecell.broadinstitute.org/single_cell/study/SCP3720/spatial-mouse-brain-opioid-0042555-4f1",
+      "size": ""
+    },
+    {
+      "name": "SCP3721 - 0042555__4F4",
+      "description": "",
+      "format": "",
+      "url": "https://singlecell.broadinstitute.org/single_cell/study/SCP3721/spatial-mouse-brain-opioid-0042555-4f4",
+      "size": ""
+    },
+    {
+      "name": "SCP3722 - 0042556__3F2",
+      "description": "",
+      "format": "",
+      "url": "https://singlecell.broadinstitute.org/single_cell/study/SCP3722/spatial-mouse-brain-opioid-0042556-3f2",
+      "size": ""
+    },
+    {
+      "name": "SCP3723 - 0042556__6F1",
+      "description": "",
+      "format": "",
+      "url": "https://singlecell.broadinstitute.org/single_cell/study/SCP3723/spatial-mouse-brain-opioid-0042556-6f1",
+      "size": ""
+    }
+  ]
+}
