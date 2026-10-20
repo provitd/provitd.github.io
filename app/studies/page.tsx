@@ -6,6 +6,7 @@ import type { Study } from "@shared/schema";
 import { fetchAllStudies } from "@/app/lib/fetch-studies";
 import StudyCard from "./study-card";
 import FilterPanel from "./filter-panel";
+import { ExternalLink } from "lucide-react";
 import { Button } from "@/app/components/button";
 
 export default function StudiesPage() {
@@ -174,8 +175,13 @@ export default function StudiesPage() {
             Studies & Datasets
           </h1>
           <p className="text-lg text-(--foreground) max-w-4xl mx-auto">
-            Explore our published research and available datasets
-          </p>
+            Explore our published research and available datasets. 
+            <br></br>
+            Codes related to the analyses are available on our {" "}
+            <a href="https://github.com/provitd" className="inline-flex items-center gap-1 underline"> 
+              GitHub <ExternalLink className="h-4 w-4" aria-hidden="true" />
+            </a>.
+           </p>
         </div>
 
         <div className="flex flex-col md:flex-row-reverse md:flex-row gap-8">

@@ -33,7 +33,12 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/studies">
                 <Button size="xl" variant="outline" className="bg-(--accent-background2)">
-                  <span className="text-lg">Explore Our Research</span>
+                  <span className="text-lg">Explore our Datasets</span>
+                </Button>
+              </Link>
+              <Link href="https://github.com/provitd">
+                <Button size="xl" variant="outline" className="bg-(--accent-background2)">
+                  <span className="text-lg">Explore our GitHub</span>
                 </Button>
               </Link>
               <Link href="https://www.igbmc.fr/en/recherche/teams/subgroups/pathophysiological-role-of-vitamin-d-signalling">
