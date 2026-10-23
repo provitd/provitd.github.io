@@ -78,6 +78,30 @@ export default function StudiesPage() {
     }
   }, [options.years]);
 
+  useEffect(() => {
+    if (allStudies.length === 0) return;
+
+    const params = new URLSearchParams(window.location.search);
+    const biologicalApplication = params.get("biologicalApplication");
+    const sequencingPlatform = params.get("sequencingPlatform");
+
+    setFilters((prev) => ({
+      ...prev,
+      biologicalApplication:
+        biologicalApplication &&
+        options.biologicalApplications.includes(biologicalApplication)
+          ? [biologicalApplication]
+          : [],
+      sequencingPlatform:
+        sequencingPlatform &&
+        options.sequencingPlatforms.some(
+          (option) => option.value === sequencingPlatform
+        )
+          ? [sequencingPlatform]
+          : [],
+    }));
+  }, [allStudies, options]);
+
   const handleToggle = (key: keyof typeof filters, value: string) => {
     // Ne traiter que les clés string[]
     if (

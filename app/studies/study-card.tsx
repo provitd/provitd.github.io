@@ -1,10 +1,10 @@
 import React from "react";
 import { Card, CardContent } from "@/app/components/card";
-import { Badge } from "@/app/components/badge";
 import { ExternalLink } from "lucide-react";
 import type { Study, Dataset } from "@shared/schema";
 import ReactMarkdown from "react-markdown";
 import Link from "next/link";
+import StudyFilterLink from "./study-filter-link";
 
 interface StudyCardProps {
   study: Study;
@@ -14,43 +14,6 @@ export default function StudyCard({ study }: StudyCardProps) {
   const getImageUrl = (study: Study) => {
     if (study.imageUrl) return study.imageUrl;
     return null;
-  };
-
-  const getBiologicalApplicationColor = (app: string) => {
-    const colors: { [key: string]: string } = {
-      /* Modify to color code the categories
-      "Cancer Genomics": "bg-(--foreground) text-(--background)",
-      "Developmental Biology": "bg-(--foreground) text-(--background)",
-      Immunology: "bg-(--foreground) text-(--background)",
-      Neuroscience: "bg-(--foreground) text-(--background)",
-      */
-    };
-    return colors[app] || "bg-(--accent-background2) text-(--foreground)";
-  };
-
-  const getPlatformNameColor = (platform: string) => {
-    /* Modify to color code the categories
-    if (platform.includes("scRNA-seq")) return "bg-blue-100 text-blue-800";
-    if (platform.includes("Bulk RNA-seq")) return "bg-orange-100 text-orange-800";
-    if (platform.includes("ATAC-seq")) return "bg-green-100 text-green-800";
-    if (platform.includes("ChIP-seq")) return "bg-yellow-100 text-yellow-800";
-    */
-    return "bg-(--accent-background2) text-(--foreground)";
-  };
-
-  const getPlatformSubColor = (platform: string) => {
-    /* Modify to color code the categories
-    if (platform.includes("scRNA-seq")) return "bg-blue-100 text-blue-800";
-    if (platform.includes("Bulk RNA-seq")) return "bg-orange-100 text-orange-800";
-    if (platform.includes("ATAC-seq")) return "bg-green-100 text-green-800";
-    if (platform.includes("ChIP-seq")) return "bg-yellow-100 text-yellow-800";
-    */
-    return "bg-(--accent-background2) text-(--foreground)";
-  };
-
-  const handleAuthorClick = (authorName: string) => {
-    // Navigate to members page - could be enhanced to scroll to specific member
-    window.location.href = "/members";
   };
 
   return (
@@ -78,9 +41,13 @@ export default function StudyCard({ study }: StudyCardProps) {
             const categories = study.categories as { biologicalApplication?: string[] };
             return Array.isArray(categories.biologicalApplication) &&
               categories.biologicalApplication.map((app: string) => (
-                <Badge key={app} className={getBiologicalApplicationColor(app)}>
+                <StudyFilterLink
+                  key={app}
+                  filter="biologicalApplication"
+                  value={app}
+                >
                   {app}
-                </Badge>
+                </StudyFilterLink>
               ));
           })()}
 
@@ -89,12 +56,14 @@ export default function StudyCard({ study }: StudyCardProps) {
             const categories = study.categories as { sequencingPlatform?: { name: string; sub?: string }[] };
             return Array.isArray(categories.sequencingPlatform) &&
               categories.sequencingPlatform.map((platform: { name: string; sub?: string }, idx: number) => (
-                <React.Fragment key={platform.name + (platform.sub || "") + idx}>
-                  <Badge className={getPlatformNameColor(platform.name)}>
-                    {platform.name}
-                    {platform.sub ? ` - ${platform.sub}` : ""}
-                  </Badge>
-                </React.Fragment>
+                <StudyFilterLink
+                  key={platform.name + (platform.sub || "") + idx}
+                  filter="sequencingPlatform"
+                  value={platform.sub ? `${platform.name}/${platform.sub}` : platform.name}
+                >
+                  {platform.name}
+                  {platform.sub ? ` - ${platform.sub}` : ""}
+                </StudyFilterLink>
               ));
           })()}
 

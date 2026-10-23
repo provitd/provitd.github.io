@@ -4,8 +4,8 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import type { Study } from "@shared/schema";
-import { Badge } from "@/app/components/badge";
 import StudyCard from "../study-card";
+import StudyFilterLink from "../study-filter-link";
 
 const studiesDirectory = path.join(process.cwd(), "public", "data", "studies");
 
@@ -118,21 +118,23 @@ export default async function StudyPage({
                         return (
                           <>
                             {categories.biologicalApplication?.map((app) => (
-                              <Badge
+                              <StudyFilterLink
                                 key={app}
-                                className="bg-(--accent-background2) text-(--foreground)"
+                                filter="biologicalApplication"
+                                value={app}
                               >
                                 {app}
-                              </Badge>
+                              </StudyFilterLink>
                             ))}
                             {categories.sequencingPlatform?.map((platform, index) => (
-                              <Badge
+                              <StudyFilterLink
                                 key={`${platform.name}-${platform.sub || ""}-${index}`}
-                                className="bg-(--accent-background2) text-(--foreground)"
+                                filter="sequencingPlatform"
+                                value={platform.sub ? `${platform.name}/${platform.sub}` : platform.name}
                               >
                                 {platform.name}
                                 {platform.sub ? ` - ${platform.sub}` : ""}
-                              </Badge>
+                              </StudyFilterLink>
                             ))}
                           </>
                         );
