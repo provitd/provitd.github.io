@@ -175,7 +175,7 @@ export default async function StudyPage({
                         );
                       })()}
                     </div>
-                    {otherStudy.doi && (
+                    {otherStudy.doi?.trim() && (
                       <p className="mt-3 break-all text-sm text-(--foreground)/80">
                         DOI:{" "}
                         <a

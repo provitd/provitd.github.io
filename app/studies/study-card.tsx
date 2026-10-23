@@ -124,9 +124,7 @@ export default function StudyCard({ study }: StudyCardProps) {
             {study.year}
           </div>
           <div className="flex items-center gap-3">
-            {study.doi === "" ? (
-              <span className="text-(--foreground)">TBD</span>
-            ) : (
+            {study.doi?.trim() && (
               <a
                 href={`https://doi.org/${study.doi}`}
                 target="_blank"
