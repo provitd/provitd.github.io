@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, CardContent } from "@/app/components/card";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import type { Study, Dataset } from "@shared/schema";
 import ReactMarkdown from "react-markdown";
 import Link from "next/link";
@@ -123,7 +123,7 @@ export default function StudyCard({ study }: StudyCardProps) {
             {Array.isArray(study.authors) ? study.authors[0] : study.authors} | 
             {study.year}
           </div>
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center gap-3">
             {study.doi === "" ? (
               <span className="text-(--foreground)">TBD</span>
             ) : (
@@ -136,6 +136,20 @@ export default function StudyCard({ study }: StudyCardProps) {
                 {study.doi}
               </a>
             )}
+            {Array.isArray(study.githubRepositories) &&
+              study.githubRepositories.map((repository, index) => (
+                <a
+                  key={`${repository}-${index}`}
+                  href={repository}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`GitHub repository ${repository.replace(/^https:\/\/github\.com\//, "")}`}
+                  title={repository.replace(/^https:\/\/github\.com\//, "")}
+                  className="inline-flex text-(--foreground) transition-opacity hover:opacity-70"
+                >
+                  <Github className="h-4 w-4" aria-hidden="true" />
+                </a>
+              ))}
           </div>
         </div>
       </CardContent>

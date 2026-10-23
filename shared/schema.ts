@@ -27,6 +27,7 @@ export const studies = pgTable("studies", {
   imageUrl: text("image_url"),
   doi: text("doi"),
   geoAccessions: jsonb("geo_accessions").$type<string[]>().notNull(),
+  githubRepositories: jsonb("github_repositories").$type<string[]>().notNull(),
   date: text("date").notNull(),
   year: integer("year").notNull(),
   datasets: jsonb("datasets").notNull(), // Array of dataset objects
