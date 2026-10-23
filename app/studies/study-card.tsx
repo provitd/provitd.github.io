@@ -4,6 +4,7 @@ import { Badge } from "@/app/components/badge";
 import { ExternalLink } from "lucide-react";
 import type { Study, Dataset } from "@shared/schema";
 import ReactMarkdown from "react-markdown";
+import Link from "next/link";
 
 interface StudyCardProps {
   study: Study;
@@ -65,18 +66,12 @@ export default function StudyCard({ study }: StudyCardProps) {
       )}
       <CardContent className="p-6">
         <h3 className="text-xl font-semibold">
-          {study.doi === "" ? (
-            <span>{study.title}</span>
-          ) : (
-            <a
-              href={`https://doi.org/${study.doi}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-(--accent-foreground) transition-colors"
-            >
-              {study.title}
-            </a>
-          )}
+          <Link
+            href={`/studies/${encodeURIComponent(study.id)}`}
+            className="hover:text-(--accent-foreground) transition-colors"
+          >
+            {study.title}
+          </Link>
         </h3>
         <div className="flex flex-wrap gap-2 mt-4 mb-4">
           {(() => {
