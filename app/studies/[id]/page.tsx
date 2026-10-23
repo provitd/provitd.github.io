@@ -38,9 +38,11 @@ export default async function StudyPage({
   if (!study) notFound();
 
   const studyIndex = studies.findIndex((item) => item.id === id);
+  const previousStudy = studies[studyIndex - 1];
+  const nextStudy = studies[studyIndex + 1];
   const otherStudies = studies
     .filter((item) => item.id !== id)
-    .slice(0, 3);
+    .slice(0, 2);
 
   return (
     <section className="py-10 sm:py-14 bg-(--background)">
@@ -53,49 +55,82 @@ export default async function StudyPage({
             <ArrowLeft className="h-4 w-4" aria-hidden="true" />
             All studies & datasets
           </Link>
-          <div className="mt-6 flex flex-wrap items-center justify-between gap-3 border-b border-gray-200 pb-5">
+          <div className="mt-6 flex flex-wrap items-center justify-between gap-4 border-b border-gray-200 pb-5">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-wider text-(--foreground)/70">
+              <p className="text-sm font-semibold uppercase tracking-wider text-(--foreground)">
                 Study details
               </p>
-              <p className="mt-1 text-sm text-(--foreground)/70">
+              <p className="mt-1 text-sm text-(--foreground)">
                 Study {studyIndex + 1} of {studies.length}
               </p>
+              <Link
+                href="/studies"
+                className="mt-2 inline-block text-sm font-semibold text-(--foreground) underline underline-offset-4 hover:text-(--accent-foreground)"
+              >
+                View all studies
+              </Link>
             </div>
-            <Link
-              href="/studies"
-              className="inline-flex items-center gap-2 rounded-full border border-gray-300 px-4 py-2 text-sm font-medium text-(--foreground) transition-colors hover:bg-(--accent-background2)"
-            >
-              Browse all {studies.length} studies
-              <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </Link>
+            <nav aria-label="Study navigation" className="flex items-center gap-3">
+              {previousStudy ? (
+                <Link
+                  href={`/studies/${encodeURIComponent(previousStudy.id)}`}
+                  rel="prev"
+                  className="inline-flex items-center gap-1 rounded-full border border-gray-300 px-3 py-2 text-sm font-medium text-(--foreground) transition-colors hover:bg-(--accent-background2)"
+                >
+                  <ArrowLeft className="h-4 w-4" aria-hidden="true" />
+                  <span className="hidden sm:inline">Previous</span>
+                </Link>
+              ) : (
+                <span
+                  aria-disabled="true"
+                  className="inline-flex items-center gap-1 rounded-full border border-gray-200 px-3 py-2 text-sm text-(--foreground)/40"
+                >
+                  <ArrowLeft className="h-4 w-4" aria-hidden="true" />
+                  <span className="hidden sm:inline">Previous</span>
+                </span>
+              )}
+              {nextStudy ? (
+                <Link
+                  href={`/studies/${encodeURIComponent(nextStudy.id)}`}
+                  rel="next"
+                  className="inline-flex items-center gap-1 rounded-full border border-gray-300 px-3 py-2 text-sm font-medium text-(--foreground) transition-colors hover:bg-(--accent-background2)"
+                >
+                  <span className="hidden sm:inline">Next</span>
+                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                </Link>
+              ) : (
+                <span
+                  aria-disabled="true"
+                  className="inline-flex items-center gap-1 rounded-full border border-gray-200 px-3 py-2 text-sm text-(--foreground)/40"
+                >
+                  <span className="hidden sm:inline">Next</span>
+                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                </span>
+              )}
+            </nav>
           </div>
         </div>
 
-        <div className="mx-auto max-w-3xl">
-          <StudyCard study={study} />
-        </div>
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,2fr)_minmax(280px,1fr)] lg:items-start">
+          <div className="mx-auto w-full max-w-3xl">
+            <StudyCard study={study} />
+          </div>
 
-        <section className="mt-14" aria-labelledby="more-studies-heading">
-          <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
-            <div>
-              <h2 id="more-studies-heading" className="text-2xl font-bold text-(--foreground)">
+          <section
+            className="lg:sticky lg:top-24"
+            aria-labelledby="more-studies-heading"
+          >
+            <div className="mb-5">
+              <h2 id="more-studies-heading" className="text-xl font-bold text-(--foreground)">
                 Explore more studies
               </h2>
-              <p className="mt-1 text-(--foreground)/70">
+              <p className="mt-1 text-sm text-(--foreground)/70">
                 There’s more research and data to discover.
               </p>
             </div>
-            <Link
-              href="/studies"
-              className="text-sm font-semibold text-(--foreground) underline underline-offset-4 hover:text-(--accent-foreground)"
-            >
-              View all studies
-            </Link>
-          </div>
 
-          {otherStudies.length > 0 ? (
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {otherStudies.length > 0 ? (
+              <div className="grid gap-4">
               {otherStudies.map((otherStudy) => (
                 <article
                   key={otherStudy.id}
@@ -164,13 +199,14 @@ export default async function StudyPage({
                   </div>
                 </article>
               ))}
-            </div>
-          ) : (
-            <p className="rounded-lg border border-gray-200 bg-white p-5 text-(--foreground)/70">
-              Browse the studies page to see the latest research and datasets.
-            </p>
-          )}
-        </section>
+              </div>
+            ) : (
+              <p className="rounded-lg border border-gray-200 bg-white p-5 text-(--foreground)/70">
+                Browse the studies page to see the latest research and datasets.
+              </p>
+            )}
+          </section>
+        </div>
       </div>
     </section>
   );
