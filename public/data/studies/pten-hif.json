@@ -12,6 +12,7 @@
   },
   "imageUrl": "/images/pten-hif.png",
   "doi": "10.1126/sciadv.abo2295",
+  "geoAccessions": ["GSE186419", "GSE164858"],
   "date": "22/07/2022",
   "year": 2022,
   "datasets": [

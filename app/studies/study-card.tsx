@@ -134,6 +134,26 @@ export default function StudyCard({ study }: StudyCardProps) {
           </div>
         </div>
 
+        {Array.isArray(study.geoAccessions) && study.geoAccessions.length > 0 && (
+          <div className="mb-4 text-m">
+            <span className="font-semibold">GEO: </span>
+            {study.geoAccessions.map((accession, index) => (
+              <React.Fragment key={`${accession}-${index}`}>
+                {index > 0 && ", "}
+                <a
+                  href={`https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=${encodeURIComponent(accession)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-(--foreground) hover:text-(--accent-foreground)"
+                >
+                  {accession}
+                  <ExternalLink className="inline h-4 w-4 ml-1" />
+                </a>
+              </React.Fragment>
+            ))}
+          </div>
+        )}
+
         <div className="flex text-sm items-center justify-between pt-4 border-t border-(--forground)">
           <div className="flex items-center space-x-3">
             {Array.isArray(study.authors) ? study.authors[0] : study.authors} | 

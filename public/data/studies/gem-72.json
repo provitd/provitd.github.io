@@ -12,6 +12,7 @@
     },
     "imageUrl": "/images/gem-72.png",
     "doi": "10.1126/sciadv.abg5982",
+    "geoAccessions": ["GSE164858"],
     "date": "30/07/2021",
     "year": 2021,
     "datasets": [

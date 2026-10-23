@@ -26,6 +26,7 @@ export const studies = pgTable("studies", {
   categories: jsonb("categories").notNull(), // Hierarchical categories
   imageUrl: text("image_url"),
   doi: text("doi"),
+  geoAccessions: jsonb("geo_accessions").$type<string[]>().notNull(),
   date: text("date").notNull(),
   year: integer("year").notNull(),
   datasets: jsonb("datasets").notNull(), // Array of dataset objects
