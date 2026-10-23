@@ -100,20 +100,6 @@
       "format": "",
       "url": "https://singlecell.broadinstitute.org/single_cell/study/SCP3721/spatial-mouse-brain-opioid-0042555-4f4",
       "size": ""
-    },
-    {
-      "name": "SCP3722 - 0042556__3F2",
-      "description": "",
-      "format": "",
-      "url": "https://singlecell.broadinstitute.org/single_cell/study/SCP3722/spatial-mouse-brain-opioid-0042556-3f2",
-      "size": ""
-    },
-    {
-      "name": "SCP3723 - 0042556__6F1",
-      "description": "",
-      "format": "",
-      "url": "https://singlecell.broadinstitute.org/single_cell/study/SCP3723/spatial-mouse-brain-opioid-0042556-6f1",
-      "size": ""
     }
   ]
 }
