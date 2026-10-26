@@ -88,10 +88,10 @@ export default function StudyCard({ study }: StudyCardProps) {
                     href={dataset.url || "#"}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-(--foreground) hover:text-(--accent-foreground) flex items-center"
+                    className="inline-flex items-center gap-1 text-(--foreground) hover:text-(--accent-foreground)"
                   >
                     {dataset.name}
-                    <ExternalLink className="h-5 w-5 ml-2" />
+                    <ExternalLink className="h-4 w-4" />
                   </a>
                 </div>
               ))}
@@ -108,10 +108,10 @@ export default function StudyCard({ study }: StudyCardProps) {
                   href={`https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=${encodeURIComponent(accession)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-(--foreground) hover:text-(--accent-foreground)"
+                  className="inline-flex items-center gap-1 text-(--foreground) hover:text-(--accent-foreground)"
                 >
                   {accession}
-                  <ExternalLink className="inline h-4 w-4 ml-1" />
+                  <ExternalLink className="h-4 w-4" />
                 </a>
               </React.Fragment>
             ))}
