@@ -1,0 +1,28 @@
+{
+    "id": "kidney-zk",
+    "title": "Vitamin D-induced hypercalcemia and renal polyamine degradation drive proximal tubule injury in kidney disease",
+    "description": "Under review.",
+    "authors": ["Rovito, D"],
+    "categories": {
+      "biologicalApplication": ["Kidney", "Vitamin D"],
+      "sequencingPlatform": [{
+        "name": "scRNA-seq",
+        "sub": "10x Genomics v3"
+      }]
+    },
+    "imageUrl": "",
+    "doi": "",
+    "geoAccessions": ["GSE302872"],
+    "githubRepositories": ["https://github.com/provitd/ZK_2025"],
+    "date": "",
+    "year": 2027,
+    "datasets": [
+        {
+        "name": "SingleCellViz - ZK",
+        "description": "",
+        "format": "",
+        "url": "https://metzger-chambon.igbmc.science/SingleCellViz-ZK/",
+        "size": ""
+        }
+    ]
+}
